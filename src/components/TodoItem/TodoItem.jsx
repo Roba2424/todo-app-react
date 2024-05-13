@@ -7,7 +7,7 @@ export default function TodoItem({ task }) {
   return (
     <div className="TodoItem">
       <p>{task.task}</p>
-      <div>
+      <div className="todo-icons">
         <FontAwesomeIcon icon={faPenToSquare} />{" "}
         <FontAwesomeIcon icon={faTrash} />
       </div>
