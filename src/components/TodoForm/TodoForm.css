@@ -1,0 +1,21 @@
+.todo-input {
+  padding: 0.5rem 1rem;
+  outline: none;
+  background: none;
+  width: 400px;
+  color: #fff;
+  border: 1px solid #8758ff;
+}
+
+.todo-btn {
+  padding: 0.5rem 1rem;
+  background: #8758ff;
+  border: 1px solid #8758ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
