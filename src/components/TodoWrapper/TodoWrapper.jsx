@@ -14,12 +14,20 @@ export default function TodoWrapper() {
     ]);
   };
 
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) => {
+        return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
+      })
+    );
+  };
+
   return (
     <div className="todo-wrapper">
       <h1>Title of TODOS</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) => (
-        <TodoItem task={todo} key={index} />
+        <TodoItem task={todo} key={index} toggleComplete={toggleComplete} />
       ))}
     </div>
   );

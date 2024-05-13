@@ -10,9 +10,9 @@
 }
 
 .TodoItem p {
-
   font-size: 1.2em;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .todo-icons {
@@ -20,4 +20,16 @@
   width: 3rem;
   justify-content: space-between;
   font-size: 20px;
+}
+
+.complete {
+  color: #c5aeff;
+  transition: 400ms ease-out;
+  transform: rotate(360deg);
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+  transition: 400ms ease-in;
 }
