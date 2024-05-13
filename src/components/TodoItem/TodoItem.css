@@ -21,6 +21,10 @@
   justify-content: space-between;
   font-size: 20px;
 }
+.todo-icons .fa-trash-list {
+  color: yellow;
+  margin-left: 0.5rem;
+}
 
 .complete {
   color: #c5aeff;

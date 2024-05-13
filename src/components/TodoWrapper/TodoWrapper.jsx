@@ -22,12 +22,21 @@ export default function TodoWrapper() {
     );
   };
 
+  const removeTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <div className="todo-wrapper">
       <h1>Title of TODOS</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) => (
-        <TodoItem task={todo} key={index} toggleComplete={toggleComplete} />
+        <TodoItem
+          task={todo}
+          key={index}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+        />
       ))}
     </div>
   );
