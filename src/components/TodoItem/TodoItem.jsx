@@ -3,17 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
 
-export default function TodoItem({ task, toggleComplete, removeTodo }) {
+export default function TodoItem({
+  task,
+  toggleComplete,
+  removeTodo,
+  editTodo,
+}) {
   const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <div className="TodoItem">
       <p
@@ -23,15 +19,22 @@ export default function TodoItem({ task, toggleComplete, removeTodo }) {
         {task.task}
       </p>
       <div className="todo-icons">
-        <FontAwesomeIcon icon={faPenToSquare} />
+        <FontAwesomeIcon
+          icon={faPenToSquare}
+          className="icon-hover"
+          onClick={() => editTodo(task.id)}
+        />
         {isHovered ? (
           <i
-            class="fa-solid fa-trash-list fa-shake"
-            onMouseLeave={handleMouseLeave}
+            className="fa-solid fa-trash-list fa-shake icon-hover"
+            onMouseLeave={() => setIsHovered(false)}
             onClick={() => removeTodo(task.id)}
           ></i>
         ) : (
-          <i className="fa-solid fa-trash" onMouseEnter={handleMouseEnter}></i>
+          <i
+            className="fa-solid fa-trash icon-hover"
+            onMouseEnter={() => setIsHovered(true)}
+          ></i>
         )}
       </div>
     </div>

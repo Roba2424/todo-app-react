@@ -7,3 +7,7 @@
   padding: 3rem;
   border-radius: 0.5rem;
 }
+
+.icon-hover:hover {
+  cursor: pointer;
+}

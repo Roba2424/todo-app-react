@@ -1,0 +1,33 @@
+.EditDialog {
+  margin: auto;
+  background: #331455;
+  border: none;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+}
+
+#edit-input {
+  background-color: #fff;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 200px;
+  border-radius: 0.2rem;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-buttons button {
+  color: #331455;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  margin-right: 10px;
+}
