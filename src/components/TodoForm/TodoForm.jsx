@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "../TodoForm/TodoForm.css";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../../store/todoSlice";
 
-export default function TodoForm({ addTodo }) {
+export default function TodoForm() {
   const [value, setValue] = useState("");
+  const dispatch = useDispatch();
 
+  console.log("alo " + value);
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!!value) addTodo(value);
+    if (!!value) dispatch(addTodo(value));
     setValue("");
   };
 

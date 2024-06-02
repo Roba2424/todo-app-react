@@ -20,6 +20,7 @@
   width: 3rem;
   justify-content: space-between;
   font-size: 20px;
+  cursor: pointer;
 }
 .todo-icons .fa-trash-list {
   color: yellow;
